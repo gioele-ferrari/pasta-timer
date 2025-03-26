@@ -1,0 +1,58 @@
+[
+    {
+      "nome_marca": "Barilla",
+      "tipo": "lunga",
+      "nome_pasta": "Spaghetti",
+      "cottura_min": 8,
+      "abbinamento": "Pomodoro e basilico"
+    },
+    {
+      "nome_marca": "De Cecco",
+      "tipo": "corta",
+      "nome_pasta": "Penne Rigate",
+      "cottura_min": 11,
+      "abbinamento": "Sugo all'arrabbiata"
+    },
+    {
+      "nome_marca": "Rummo",
+      "tipo": "lunga",
+      "nome_pasta": "Linguine",
+      "cottura_min": 10,
+      "abbinamento": "Pesto alla genovese"
+    },
+    {
+      "nome_marca": "Garofalo",
+      "tipo": "corta",
+      "nome_pasta": "Fusilli",
+      "cottura_min": 11,
+      "abbinamento": "Ragù alla bolognese"
+    },
+    {
+      "nome_marca": "La Molisana",
+      "tipo": "lunga",
+      "nome_pasta": "Tagliatelle",
+      "cottura_min": 7,
+      "abbinamento": "Funghi porcini e panna"
+    },
+    {
+      "nome_marca": "Voiello",
+      "tipo": "corta",
+      "nome_pasta": "Tortiglioni",
+      "cottura_min": 12,
+      "abbinamento": "Salsiccia e zafferano"
+    },
+    {
+      "nome_marca": "Granoro",
+      "tipo": "corta",
+      "nome_pasta": "Orecchiette",
+      "cottura_min": 13,
+      "abbinamento": "Cime di rapa"
+    },
+    {
+      "nome_marca": "Divella",
+      "tipo": "lunga",
+      "nome_pasta": "Bucatini",
+      "cottura_min": 9,
+      "abbinamento": "Amatriciana"
+    }
+]
