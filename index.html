@@ -11,6 +11,7 @@
       content="default-src 'self'; script-src 'self'"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <link rel="stylesheet" href="style.css">
     <title>Pasta Timer</title>
   </head>
@@ -28,13 +29,23 @@
         <span id="timer-text">Inizio timer...</span>
       </div>
       <div class="button-container">
-        <button id="start-timer">Inizia la cottura!</button>
-        <button id="reset-timer">Reimposta il timer!</button>
-      </div>  
+        <button id="start-timer">
+          INIZIA
+        </button>        
+        <button id="reset-timer">
+          RESET
+        </button>
+        <button id="audio-mute">
+          MUTE
+        </button>
+      </div>
+      <p>      
+        Made with love by <a href="https://github.com/gioele-ferrari" class="highlight">gioele-ferrari</a>
+      </p>      
     </div>
-
     <audio src="./src/sounds/background_music.mp3" id="pasta-audio"></audio>
     <script src="./src/scripts/timer.js"></script>
     <script src="./src/scripts/pasta.js"></script>
+    <script src="./src/scripts/audio.js"></script>
   </body>
 </html>

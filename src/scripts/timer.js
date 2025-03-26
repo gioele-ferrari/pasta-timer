@@ -24,7 +24,6 @@ document.getElementById("start-timer").addEventListener("click", () => {
         let seconds = Math.floor((distance % (1000 * 60)) / 1000);
         timerText.textContent = `${minutes}m ${seconds.toString().padStart(2, '0')}s`;
 
-        // aggiorna la barra
         const percent = (distance / totalDuration) * 100;
         timerBar.style.width = `${percent}%`;
 
@@ -36,6 +35,8 @@ document.getElementById("start-timer").addEventListener("click", () => {
 
             pasta_audio_dom.pause();
             pasta_audio_dom.currentTime = 0;
+
+            
         }
 
         if (reset_timer) {
