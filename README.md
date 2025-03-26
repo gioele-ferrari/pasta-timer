@@ -18,13 +18,9 @@ Questa applicazione in JavaScript (Electron) permette di avviare un timer per la
 
 ## Funzionalità principali
 
-1. **Avvio del Timer**
+1. **Avvio del Timer** : L’utente può selezionare il tempo di cottura da un menù a tendina e avviare il timer cliccando su "Inizia la cottura!".
 
-L’utente può selezionare il tempo di cottura da un menù a tendina e avviare il timer cliccando su "Inizia la cottura!".
-
-2. **Reset**
-
-In qualsiasi momento è possibile premere "Reimposta il timer!" per fermare la musica e resettare l'interfaccia.
+2. **Reset**: In qualsiasi momento è possibile premere "Reimposta il timer!" per fermare la musica e resettare l'interfaccia.
 
 ---
 
