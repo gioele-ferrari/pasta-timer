@@ -16,9 +16,17 @@
   </head>
   <body>
     <div class="container">
+      <h2 class="main-title">
+        Spaghetti Timer
+        <img src="src/images/spaghetti.png" alt="Spaghetti Icon" class="spaghetti-icon">
+      </h2>      
       <select id="pasta-list" class=""></select>
-      <div id="pasta-timer" class="hidden">Inizio timer...</div>
-      <div id="pasta-description" class="hidden"></div>
+      <div id="pasta-timer" class="hidden">
+        <div id="timer-bar-container">
+          <div id="timer-bar"></div>
+        </div>
+        <span id="timer-text">Inizio timer...</span>
+      </div>
       <div class="button-container">
         <button id="start-timer">Inizia la cottura!</button>
         <button id="reset-timer">Reimposta il timer!</button>
