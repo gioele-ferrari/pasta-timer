@@ -2,7 +2,7 @@
 
 Questa applicazione in JavaScript (Electron) permette di avviare un timer per la cottura della pasta, con uno stile ispirato all’interfaccia di battaglia del videogioco *Undertale*. L'app è pensata per essere minimale ma d'impatto, con elementi visuali e sonori che richiamano l'estetica retro-pixel.
 
-![screenshot](./src/images/readme_image_1.png)
+![screenshot](./src/images/readme_image.png)
 
 ---
 
