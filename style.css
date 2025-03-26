@@ -35,6 +35,14 @@ body {
 #pasta-timer {
     font-size: 1.8rem;
     text-align: center;
+    border: 2px solid white;
+    padding: 1rem;
+    width: 100%;
+}
+
+#pasta-description {
+    font-size: 1.8rem;
+    text-align: center;
     border: 2px dashed white;
     padding: 1rem;
     width: 100%;
@@ -77,8 +85,7 @@ option {
     background-color: black;
     color: white;
     font-family: 'PapyrusFont', sans-serif;
-}
-  
+}  
 
 .hidden {
     display: none;
@@ -95,8 +102,8 @@ option {
     left: -25px;
     top: 50%;
     transform: translateY(-50%);
-    width: 16px;
-    height: 16px;
+    width: 24px;
+    height: 24px;
     background-image: url('./src/images/heart.png');
     background-size: contain;
     background-repeat: no-repeat;
