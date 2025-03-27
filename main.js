@@ -5,7 +5,7 @@ const createWindow = () => {
     width: 800,
     height: 600,
     autoHideMenuBar: true,  
-  })
+  });
 
   win.loadFile('index.html')
 }
