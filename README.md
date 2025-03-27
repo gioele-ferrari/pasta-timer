@@ -37,14 +37,16 @@ Questa applicazione in JavaScript (Electron) permette di avviare un timer per la
 Per eseguire l'app localmente:
 
 ```bash
-    git clone https://github.com/gioele-ferrari/pasta-timer.git
-    cd pasta-timer
-    npm install
-    npm start
+git clone https://github.com/gioele-ferrari/pasta-timer.git
+cd pasta-timer
+npm install
+npm start
 ```
 
 ## Esportazione
 
 ```bash
-    npm run dist
+npm run dist
 ```
+
+C'è un piccolo problema quando si avvia l'app ovvero che richiede l'opzione da riga di comando `pasta-timer --no-sandbox` capirò poi come aggiorne questo problema.

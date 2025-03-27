@@ -1,5 +1,7 @@
 const { app, BrowserWindow } = require('electron/main')
 
+app.commandLine.appendSwitch('no-sandbox');
+
 const createWindow = () => {
   const win = new BrowserWindow({
     width: 800,

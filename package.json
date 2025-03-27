@@ -21,10 +21,8 @@
     "appId": "com.gioeleferrari.pastatimer",
     "productName": "Pasta Timer",
     "linux": {
-      "target": [
-        "AppImage",
-        "deb"
-      ],
+      "icon": "build/icon.png",
+      "target": ["AppImage", "deb"],
       "category": "Utility"
     }
   }  
