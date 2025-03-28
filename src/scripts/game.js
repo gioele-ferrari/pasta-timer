@@ -19,6 +19,17 @@ document.addEventListener("DOMContentLoaded", () => {
     
     player.image.src = "src/images/heart.png";
 
+
+    const projectile = {
+        x: game_box.width - 64,
+        y: game_box.height - 64,
+        size: 32,
+        speed: 5,
+        image: new Image() 
+    }
+
+    projectile.image.src = "src/images/annoying-dog-1.gif";
+
     const keys = {
         left: false,
         right: false,
@@ -26,6 +37,8 @@ document.addEventListener("DOMContentLoaded", () => {
         down: false
     };
     
+    const projectiles = [];
+
     document.onkeydown = function(e) {
         switch(e.key) {
             case "ArrowLeft":
@@ -66,35 +79,48 @@ document.addEventListener("DOMContentLoaded", () => {
         if(keys.left) { player.x -= player.speed; }
         if(keys.up) { player.y -= player.speed; }
         if(keys.down) { player.y += player.speed; }
-        
-        if (player.x < 0) {
-            player.x = 0;
-        }
-        if (player.x + player.size > game_box.width) {
-            player.x = game_box.width - player.size;
-        }
-        
-        if (player.y < 0) {
-            player.y = 0;
-        }
-        if (player.y + player.size > game_box.height) {
-            player.y = game_box.height - player.size;
-        }
+
+        check_collision(player, game_box);
     }
     
     function draw() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
     
         ctx.strokeStyle = "black";
+
         ctx.strokeRect(game_box.x, game_box.y, game_box.width, game_box.height);
-    
         ctx.drawImage(player.image, player.x, player.y, player.size, player.size);
+        
+        for (let p of projectiles) {
+            ctx.drawImage(p.image, p.x, p.y, p.size, p.size);
+        }
     }
     
     function gameLoop() {
         update();
         draw();
         requestAnimationFrame(gameLoop);
+    }
+
+    function check_collision(source, destination) {
+        if (source.x < 0) source.x = 0;
+        if (source.x + source.size > destination.width)
+            source.x = destination.width - source.size;
+    
+        if (source.y < 0) source.y = 0;
+        if (source.y + source.size > destination.height)
+            source.y = destination.height - source.size;
+
+        return false;
+    }
+
+    function is_colliding(source, destination) {
+        return (
+            source.x < destination.x + destination.size &&
+            source.x + source.size > destination.x &&
+            source.y < destination.y + destination.size &&
+            source.y + source.size > destination.y
+        );
     }
     
     gameLoop();
