@@ -1,9 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
     const canvas = document.getElementById("game-canvas");
     const ctx = canvas.getContext("2d");
-    let player_size = 32;
 
-    const box = {
+    const game_box = {
         x: 0,
         y: 0,
         width: canvas.width,
@@ -11,9 +10,9 @@ document.addEventListener("DOMContentLoaded", () => {
     };
     
     const player = {
-        x: box.width / 2 - player_size,
-        y: box.height / 2 - player_size,
-        size: player_size,
+        x: game_box.width / 2 - 32,
+        y: game_box.height / 2 - 32,
+        size: 32,
         speed: 5,
         image: new Image()
     };
@@ -71,15 +70,15 @@ document.addEventListener("DOMContentLoaded", () => {
         if (player.x < 0) {
             player.x = 0;
         }
-        if (player.x + player.size > box.width) {
-            player.x = box.width - player.size;
+        if (player.x + player.size > game_box.width) {
+            player.x = game_box.width - player.size;
         }
         
         if (player.y < 0) {
             player.y = 0;
         }
-        if (player.y + player.size > box.height) {
-            player.y = box.height - player.size;
+        if (player.y + player.size > game_box.height) {
+            player.y = game_box.height - player.size;
         }
     }
     
@@ -87,7 +86,7 @@ document.addEventListener("DOMContentLoaded", () => {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
     
         ctx.strokeStyle = "black";
-        ctx.strokeRect(box.x, box.y, box.width, box.height);
+        ctx.strokeRect(game_box.x, game_box.y, game_box.width, game_box.height);
     
         ctx.drawImage(player.image, player.x, player.y, player.size, player.size);
     }
