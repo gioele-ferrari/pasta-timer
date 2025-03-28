@@ -36,7 +36,7 @@ document.getElementById("start-timer").addEventListener("click", () => {
             pasta_audio_dom.pause();
             pasta_audio_dom.currentTime = 0;
 
-            
+            spawnDogs();
         }
 
         if (reset_timer) {
@@ -63,3 +63,8 @@ document.getElementById("reset-timer").addEventListener("click", () => {
     pasta_audio_dom.pause();
     pasta_audio_dom.currentTime = 0;
 });
+
+
+function spawnDogs() {
+    
+}
