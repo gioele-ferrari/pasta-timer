@@ -5,10 +5,13 @@ var pasta_audio_dom = document.getElementById("pasta-audio");
 
 pasta_audio_dom.loop = true;
 
+export let countdown = 0;
+
 document.getElementById("start-timer").addEventListener("click", () => {
     let minutes = pasta_option_dom.options[pasta_option_dom.selectedIndex].value;
-    let totalDuration = minutes * 60 * 1000; // durata in ms
-    let distance = totalDuration;
+    let total_minutes = minutes * 60 * 1000
+    
+    countdown = total_minutes;
 
     const timerBar = document.getElementById("timer-bar");
     const timerText = document.getElementById("timer-text");
@@ -20,14 +23,14 @@ document.getElementById("start-timer").addEventListener("click", () => {
     pasta_audio_dom.play();
 
     const timer = setInterval(() => {
-        let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        let minutes = Math.floor((countdown % (1000 * 60 * 60)) / (1000 * 60));
+        let seconds = Math.floor((countdown % (1000 * 60)) / 1000);
         timerText.textContent = `${minutes}m ${seconds.toString().padStart(2, '0')}s`;
 
-        const percent = (distance / totalDuration) * 100;
+        const percent = (countdown / total_minutes) * 100;
         timerBar.style.width = `${percent}%`;
 
-        if (distance <= 0) {
+        if (countdown <= 0) {
             clearInterval(timer);
             reset_timer = false;
             timerText.textContent = "Terminata la cottura!";
@@ -49,7 +52,7 @@ document.getElementById("start-timer").addEventListener("click", () => {
             pasta_audio_dom.currentTime = 0;
         }
 
-        distance -= 1000;
+        countdown -= 1000;
     }, 1000);
 });
 
@@ -64,7 +67,8 @@ document.getElementById("reset-timer").addEventListener("click", () => {
     pasta_audio_dom.currentTime = 0;
 });
 
-
-function spawnDogs() {
-    
+export function sub_countdown(seconds) {
+    if((countdown - seconds) > 0) {
+        countdown -= seconds;
+    }
 }
