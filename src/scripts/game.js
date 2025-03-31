@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
             projectiles[i].update();
             if (is_colliding(projectiles[i], game_box) || is_colliding(player, projectiles[i])) {
                 projectiles.splice(i, 1);
-                console.log("Colpito!");
+
                 sub_countdown(5000);
             }
         }
@@ -51,10 +51,10 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     setInterval(() => {
-        const x = Math.random() * game_box.width;
-        const p = createProjectile(x, 0, 0, 3);
+        const x = Math.random() * (game_box.width - 32) + 32;
+        const p = createProjectile(x - 32, 0, 0, 3);
         projectiles.push(p);
-    }, 1200);
+    }, 600);
 
     gameLoop();
 });

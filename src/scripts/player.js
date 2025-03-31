@@ -7,6 +7,7 @@ export const player = {
     size: 32,
     speed: 5,
     image: new Image(),
+    
     update(keys, game_box) {
         if(keys.right) { player.x += player.speed; }
         if(keys.left) { player.x -= player.speed; }
